@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fuProcessInfo", "fuProcessInfo\fuProcessInfo.csproj", "{3F21BDF7-ED38-48B1-9D1C-8F832276626C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityMetadataClassGen", "EntityMetadataClassGen\EntityMetadataClassGen.csproj", "{8BABF4C5-0177-438B-B873-CB48B9CFDBA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3F21BDF7-ED38-48B1-9D1C-8F832276626C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F21BDF7-ED38-48B1-9D1C-8F832276626C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F21BDF7-ED38-48B1-9D1C-8F832276626C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8BABF4C5-0177-438B-B873-CB48B9CFDBA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BABF4C5-0177-438B-B873-CB48B9CFDBA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BABF4C5-0177-438B-B873-CB48B9CFDBA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BABF4C5-0177-438B-B873-CB48B9CFDBA8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

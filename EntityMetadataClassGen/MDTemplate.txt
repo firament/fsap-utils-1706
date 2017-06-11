@@ -1,0 +1,32 @@
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+// Namespace matching is IMPORTANT
+namespace ${ENTITY_NAME_SPACE}
+{
+	/// <summary>
+	/// Additional namespace segment to avoid polluting Entity Namespace.
+	/// Intellisense will show both classes if they are in same namespace.
+	/// </summary>
+	namespace ${ANNOTATION_NAME_SPACE}
+	{
+		/// <summary>
+		/// Data Annotation class.
+		/// Copied As-Is from generated code, and add suffix '${METADATA_CLASS_SUFFIX}' to class name
+		/// Add required Annotations on properties in this class
+		/// Remove Properties for which Metadata is not required
+		/// </summary>
+		public sealed class ${ENTITY_CLASS_NAME}${METADATA_CLASS_SUFFIX}
+		{
+${ENTITY_BODY}
+		}
+	}
+	
+	/// <summary>
+	/// Partial Class definition to hoist Metadata on EF6 generated class
+	/// </summary>
+	[MetadataType(typeof(${ANNOTATION_NAME_SPACE}.${ENTITY_CLASS_NAME}${METADATA_CLASS_SUFFIX}))]
+	public partial class ${ENTITY_CLASS_NAME}
+	{	// No need for any code in this class	}
+}

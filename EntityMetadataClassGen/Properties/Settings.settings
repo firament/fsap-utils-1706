@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="fsap.EntityMetadataClassGen.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DefaultSourceFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">E:\Work\buffer\EntityMetadataClassGen-Test</Value>
+    </Setting>
+    <Setting Name="DefaultDestinationFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">E:\Work\buffer\EntityMetadataClassGen-Test\EntityMetadata</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
