@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Collections.Generic;
 
 // Namespace matching is IMPORTANT
 namespace ${ENTITY_NAME_SPACE}
@@ -17,7 +18,7 @@ namespace ${ENTITY_NAME_SPACE}
 		/// Add required Annotations on properties in this class
 		/// Remove Properties for which Metadata is not required
 		/// </summary>
-		public sealed class ${ENTITY_CLASS_NAME}${METADATA_CLASS_SUFFIX}
+		public abstract class ${ENTITY_CLASS_NAME}${METADATA_CLASS_SUFFIX}
 		{
 ${ENTITY_BODY}
 		}
@@ -28,5 +29,5 @@ ${ENTITY_BODY}
 	/// </summary>
 	[MetadataType(typeof(${ANNOTATION_NAME_SPACE}.${ENTITY_CLASS_NAME}${METADATA_CLASS_SUFFIX}))]
 	public partial class ${ENTITY_CLASS_NAME}
-	{	// No need for any code in this class	}
+	{	/* No need for any code in this class */	}
 }
