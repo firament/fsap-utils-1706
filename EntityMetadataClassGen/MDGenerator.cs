@@ -33,7 +33,7 @@ namespace fsap.EntityMetadataClassGen
 		public string AnnotationNameSpaceSegment	{ get; set; } = @"Annotations";
 		public string MetaDataClassSuffix			{ get; set; } = @"_Metadata";
 		public string MetaDataFileTemplate			{ get; set; } = @"MDTemplate.txt";
-		public string PropertyPadLeft				{ get; set; } = @"    ";
+		public string PropertyPadLeft				{ get; set; } = "\t"; //@"    ";
 		public InputData(){}
 		public void Dispose(){/* Nothing to be done*/}
 	}
@@ -45,7 +45,9 @@ namespace fsap.EntityMetadataClassGen
 		private const string MC_KEY_NSPACE		= @"namespace ";
 		private const string MC_KEY_CLASS		= @"    public partial class ";
 		private const string MC_KEY_PROP		= @"        public ";
+		private const string MC_KEY_PROP_SKIP	= @"        public virtual ";
 		private const string MC_DEF_TEMPLATE	= @"MDTemplate.txt";
+		private const string MC_DEF_ATTR_DISP	= "{1}[Display(Name = \"{0}\")]";
 
 		public MDGenerator(){}
 
@@ -227,6 +229,8 @@ namespace fsap.EntityMetadataClassGen
 			string lsAllLines = string.Empty;
 			string lsText;
 			int lsIndex = 0, lsLinesDone = 0;
+			string[] lasTokens;
+			char[] lacSplits = { ' ' };
 			StringBuilder lsbProps = new StringBuilder();
 
 			log.Info(KEYS.FILE_NAME_LOG, psSourceFileName, poInput.SourceRootFolder);
@@ -283,8 +287,14 @@ namespace fsap.EntityMetadataClassGen
 					}
 					else if (lsLine.StartsWith(MC_KEY_PROP) && lsLine.Contains("{"))	// Quick fix, identify constructor properly
 					{
-						lsbProps.AppendLine();	// need an blank line above to add annotations
-						lsbProps.AppendLine(poInput.PropertyPadLeft + lsLine);
+						if (lsLine.StartsWith(MC_KEY_PROP_SKIP)) continue;  // Ignore reference keys
+						lsbProps.AppendLine();  // need an blank line above to add annotations
+
+						// Also add default attribute to all properties, using property name
+						lasTokens = lsLine.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+						lsbProps.AppendFormat(MC_DEF_ATTR_DISP, lasTokens[2], "\t\t\t");
+						lsbProps.AppendLine();
+						lsbProps.AppendLine(poInput.PropertyPadLeft + lsLine.Replace("    ", "\t"));
 						log.Debug("lsLine (Property) = {0}", lsLine);
 					}
 

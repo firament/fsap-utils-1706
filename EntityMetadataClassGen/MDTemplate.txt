@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*
+Template last updated: Wed, 14-Jun-2017 12:02:54 +0530
+*/
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Collections.Generic;
@@ -29,5 +32,5 @@ ${ENTITY_BODY}
 	/// </summary>
 	[MetadataType(typeof(${ANNOTATION_NAME_SPACE}.${ENTITY_CLASS_NAME}${METADATA_CLASS_SUFFIX}))]
 	public partial class ${ENTITY_CLASS_NAME}
-	{	/* No need for any code in this class */	}
+	{ /* No need for any code in this class */ }
 }
