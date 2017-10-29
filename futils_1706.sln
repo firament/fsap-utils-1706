@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fuProcessInfo", "fuProcessI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityMetadataClassGen", "EntityMetadataClassGen\EntityMetadataClassGen.csproj", "{8BABF4C5-0177-438B-B873-CB48B9CFDBA8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeGenerator", "CodeGenerator\CodeGenerator.csproj", "{AC8BFCD3-7DEA-4EE0-9C3A-FEE4D4BED50B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8BABF4C5-0177-438B-B873-CB48B9CFDBA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BABF4C5-0177-438B-B873-CB48B9CFDBA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BABF4C5-0177-438B-B873-CB48B9CFDBA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC8BFCD3-7DEA-4EE0-9C3A-FEE4D4BED50B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC8BFCD3-7DEA-4EE0-9C3A-FEE4D4BED50B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC8BFCD3-7DEA-4EE0-9C3A-FEE4D4BED50B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC8BFCD3-7DEA-4EE0-9C3A-FEE4D4BED50B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
